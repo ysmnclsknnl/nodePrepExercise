@@ -19,10 +19,10 @@ let server = http.createServer(function (req, res) {
     createResponseToARequest("index.html", "text/html", res);
   }
   if (req.url === "/index.js") {
-    createResponseToARequest("index.js", "application/javascript", res);
+    createResponseToARequest(req.url, "application/javascript", res);
   }
   if (req.url === "/style.css") {
-    createResponseToARequest("style.css", "text/css", res);
+    createResponseToARequest(req.url, "text/css", res);
   }
 });
 
